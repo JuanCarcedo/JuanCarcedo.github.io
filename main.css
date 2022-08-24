@@ -2,9 +2,13 @@ body {
     font-size: 18px;
     background: FFFAFA;
 }
-
+ul {
+    font-size: 18px;
+}
+/* Tables */
 #courses, #education {
     border-collapse: collapse;
+    font-size: 18px;
 }
 #courses th, #courses td, #education th, #education td{
     border: 1px solid grey;
