@@ -1,0 +1,42 @@
+body {
+    font-size: 18px;
+    background: FFFAFA;
+}
+
+#courses, #education {
+    border-collapse: collapse;
+}
+#courses th, #courses td, #education th, #education td{
+    border: 1px solid grey;
+    padding: 5px;
+}
+#courses th, #education th{
+    text-align: center;
+    background-color: #9f9f9f;
+    color: white;
+}
+/* CSS for the navigation bar*/
+.navbar {
+    position: relative;
+    background-color: #333;
+    overflow: hidden;
+}
+.navbar a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 18px;
+}
+.navbar a:hover{
+    background-color: grey;
+    color: black;
+}
+.navbar a.active {
+    background-color: green;
+    color: white;
+}
+.navbar_contact {
+    float: center;
+}
