@@ -3,15 +3,13 @@ Comments from w3schools (additional information and explanations about items lik
 */
 
 :root{
-  --clr-white: #efefef;
-  --clr-lightgray: #ddd;
-  --clr-darkgrey: #333;
   --clr-accent: #006270;
-  --clr-ligthorange: #F3603C;
-  --clr-green: #0C8054;
   --clr-bck: #3b3a3a;
-
-  --icon-check: "\f00c";
+  --clr-darkgrey: #333;
+  --clr-green: #0C8054;
+  --clr-lightgray: #ddd;
+  --clr-ligthorange: #F3603C;
+  --clr-white: #efefef;
 }
 
 /* Remove items by https://piccalil.li/blog/a-modern-css-reset*/
@@ -28,23 +26,23 @@ Comments from w3schools (additional information and explanations about items lik
 
 /* Main body  --------------------------------------------------*/
 html, body {
-    height: 100%;
-    min-height: 100vh; /*vh	Relative to 1% of the height of the viewport==browser size**/
-    font-size: 1.12em; /*em	Relative to the font-size of the element (2em means 2 times the size of the current font)*/
+    background: var(--clr-bck);
     color: var(--clr-darkgrey);
-    background: var(--clr-bck); /*FFFAFA;*/
     font-famlily: basic-sans, Sans-Serif;
+    font-size: 1.12em; /*em	Relative to the font-size of the element (2em means 2 times the size of the current font)*/
+    height: 100%;
+    line-height: 1.5;
+    min-height: 100vh; /*vh	Relative to 1% of the height of the viewport==browser size**/
     text-size-adjust: none;
     text-rendering: optimizeSpeed;
-    line-height: 1.5;
     -webkit-text-size-adjust: none;
     -moz-text-size-adjust: none;
     -ms-text-size-adjust: none;
 }
 
 footer {
-  margin-top: 1em;
   background-color: #333;
+  margin-top: 1em;
   padding: 10px 10px;
 }
 
@@ -57,40 +55,30 @@ p, dt, .light_fonts {
 }
 
 .title {
+    color: var(--title-color, var(--clr-darkgrey));
     font-size: var(--title-size, 2.5rem); /*rem	Relative to font-size of the root element*/
     font-weigth: 500;
-    color: var(--title-color, var(--clr-darkgrey));
-    margin: 0 0 .15em; /*top right bottom*/
     line-height: 1;
+    margin: 0 0 .15em; /*top right bottom*/
 }
 .title_center {
+    color: var(--title-color_c, var(--clr-darkgrey));
     font-size: var(--title-size_c, 2.5rem); /*rem	Relative to font-size of the root element*/
     font-weigth: 500;
-    color: var(--title-color_c, var(--clr-darkgrey));
-    margin: 0 0 .15em; /*top right bottom*/
     line-height: 1;
+    margin: 0 0 .15em; /*top right bottom*/
     text-align: center;
 }
 
-
-.container-darkgrey{
-    background: var(--clr-darkgrey);
-    width: 80vw; margin: 1em auto; /* Center it */
-    padding: calc(.5em + 1vw);
-    display: grid;
-    /*Gap between members in the grid*/
-    grid-gap: 1em;
-    /*Auto order the grid based on screen*/
-    grid: auto / repeat(auto-fit, minmax(250px, 1fr)); /*fr = fraction*/
-    border-radius: 10px;
-}
-
 .container-black{
-    width: 80vw; margin: 1em auto; /*Center block after set width*/
-    padding: 0.5em 2em/*calc(.5em + 1vw)*/;
-    --title-color: var(--clr-white);
     background: var(--clr-darkgrey);
     border-radius: 10px;
+    padding: 0.5em 2em/*calc(.5em + 1vw)*/;
+    width: min(100% - 2rem, 80vw)
+    margin-inline: auto;
+    /*width: 80vw;
+    margin: 1em auto;*/ /*Center block after set width*/
+    --title-color: var(--clr-white);
 }
 
 .container-black dl, dt {
@@ -98,17 +86,29 @@ p, dt, .light_fonts {
 }
 
 .container-black-2{
-    width: 80vw; margin:0 auto; /*Center block after set width*/
-    padding: calc(.5em + 1vw);
-    --title-color: var(--clr-green);
-    --title-size: 1.5rem;
     background: var(--clr-darkgrey);
+    border-radius: 10px;
     display: grid;
-    /*Gap between members in the grid*/
-    grid-gap: 1em;
     /*Auto order the grid based on screen*/
     grid: auto / repeat(auto-fit, minmax(250px, 1fr)); /*fr = fraction*/
+    /*Gap between members in the grid*/
+    grid-gap: 1em;
+    padding: calc(.5em + 1vw);
+    width: 80vw; margin:0 auto; /*Center block after set width*/
+    --title-color: var(--clr-green);
+    --title-size: 1.5rem;
+}
+
+.container-darkgrey{
+    background: var(--clr-darkgrey);
     border-radius: 10px;
+    display: grid;
+    /*Auto order the grid based on screen*/
+    grid: auto / repeat(auto-fit, minmax(250px, 1fr)); /*fr = fraction*/
+    /*Gap between members in the grid*/
+    grid-gap: 1em;
+    padding: calc(.5em + 1vw);
+    width: 80vw; margin: 1em auto; /* Center it */
 }
 
 .grid-container ul li a.active {
@@ -119,24 +119,24 @@ p, dt, .light_fonts {
 /* Education block -------------------------------------------------- */
 .sub-container-darkgrey{
     background: var(--clr-darkgrey);
+    border-radius: 10px;
     padding: 2em 2vw;
     --title-color_c: var(--clr-white);
-    border-radius: 10px;
-}
-
-.sub-container-green{
-    background: var(--clr-green);
-    padding: 2em 2vw;
-    --title-color_c: var(--clr-lightgray);
-    color: var(--clr-white);
-    border-radius: 10px;
 }
 
 .sub-container-grey{
     background: var(--clr-lightgray);
+    border-radius: 10px;
     padding: 2em 2vw;
     --title-color_c: var(--clr-green);
+}
+
+.sub-container-green{
+    background: var(--clr-green);
     border-radius: 10px;
+    color: var(--clr-white);
+    padding: 2em 2vw;
+    --title-color_c: var(--clr-lightgray);
 }
 
 .sub-container-green.vers-2 {
@@ -149,10 +149,10 @@ p, dt, .light_fonts {
 }
 
 .list_tick{
-    text-align: left;
-    list-style: none;
     color: var(--clr-white);
     display: block;
+    list-style: none;
+    text-align: left;
 }
 
 .list_tick li {
@@ -160,46 +160,46 @@ p, dt, .light_fonts {
 }
 .list_tick li:before{
     color: var(--clr-white);
-    font-weight: 900;
-    font-size: .8em;
-    float: left;
-    margin: .5em 0 0 0;
     display: inline-block;
+    margin: .5em 0 0 0;
+    float: left;
+    font-size: .8em;
+    font-weight: 900;
 }
 
 /*Progress bars -- Languages*/
 .progress{
-    width: 200px;
-    height: 20px;
     background: var(--clr-white);
     border-radius: 10px;
+    height: 20px;
+    overflow: hidden;
     padding: 3px;
     position: relative;
-    overflow: hidden;
+    width: 200px;
 }
 .progress_langA{
-    width: 100%;
-    height: 100%;
-    border-radius: 10px;
-    transition: all 1s;
     background: #116609;
+    border-radius: 10px;
+    height: 100%;
+    transition: all 1s;
+    width: 100%;
 }
 .progress_langB{
-    width: 95%;
-    height: 100%;
-    border-radius: 10px;
-    transition: all 0.4s;
     background: #1e52a6;
+    border-radius: 10px;
+    height: 100%;
+    transition: all 0.4s;
+    width: 95%;
 }
 .progress_langC{
-    width: 20%;
-    height: 100%;
-    border-radius: 10px;
-    transition: all 0.4s;
     background: #f27011;
+    border-radius: 10px;
+    height: 100%;
+    transition: all 0.4s;
+    width: 20%;
 }
 
-/* Fade on scroll WIP */
+/* Fade on scroll WIP ---------------------- */
 /*.experience {
     animation: fadeIn 5s;
     -webkit-animation: fadeIn 5s;
@@ -240,18 +240,19 @@ p, dt, .light_fonts {
     color: var(--clr-white);
 }
 
+/* Navigation bars -------------------------------------------------- */
 /* Top menu navigation bar*/
 .nav-menu {
-    position: relative;
     background-color: #333;
     overflow: hidden;
+    position: relative;
 }
 .nav-menu a {
-    float: left;
     color: #f2f2f2;
+    float: left;
     text-align: center;
-    padding: 14px 16px;
     text-decoration: none;
+    padding: 14px 16px;
 }
 .nav-menu a:hover{
     background-color: var(--clr-lightgray);
@@ -272,22 +273,22 @@ p, dt, .light_fonts {
 
 /* Code for tabs and navs from w3schools (adapted)*/
 .nav {
-    padding-left: 0; // Override default ul/ol
-    margin-bottom: 0;
     background-color: #333;
-    overflow: hidden;
-    list-style: none;
     border-radius: 5px;
+    list-style: none;
+    margin-bottom: 0;
+    overflow: hidden;
+    padding-left: 0; // Override default ul/ol
     text-decoration: none;
 }
 .nav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-    text-color: black;
     border-radius: 5px;
+    color: #f2f2f2;
+    float: left;
+    padding: 14px 16px;
+    text-align: center;
+    text-color: black;
+    text-decoration: none;
 }
 .nav a:hover{
     background-color: var(--clr-lightgray);
@@ -297,10 +298,7 @@ p, dt, .light_fonts {
 .nav a:link, .nav a:hover, .nav a:active, .nav a:visited {
     text-decoration: none;
 }
-/*.nav a.active, .nav a:active {
-    background-color: green;
-    color: var(--clr-white);
-}*/
+
 .nav a.visited {
     color: var(--clr-white);
 }
@@ -311,17 +309,15 @@ p, dt, .light_fonts {
 
 /*Fade contents for all browsers*/
 .tab-pane {
-    opacity: 0;
-    transition: all 0.5s;
     grid-column: 1;
     grid-row: 1;
+    opacity: 0;
+    transition: all 0.5s;
 }
 
 .tab-pane.visible {
     opacity:1;
 }
-
-/* Contact details --------------------------------------------------*/
 
 /*Standard for links*/
 a:link {
@@ -335,9 +331,9 @@ a:visited {
 
 a:hover {
   color: var(--clr-accent);
+  cursor: pointer;
   background-color: transparent;
   text-decoration: underline;
-  cursor: pointer;
 }
 
 a:active {
@@ -348,21 +344,21 @@ a:active {
 
 /* Button(s) */
 .backButton{
-    width: 20vw; margin:0 auto; /*Center block after set width*/
-    padding: calc(.5em + 1vw);
     display: grid;
     /*Gap between members in the grid*/
     grid-gap: 0;
+    padding: calc(.5em + 1vw);
+    width: 20vw; margin:0 auto; /*Center block after set width*/
 }
 
 .button {
     background: var(--clr-ligthorange);
-    color: var(--clr-white);
-    font-size: calc(var(--button-scale) * 1rem);
-    padding: .5em 1.25em;
     border: 0;
     border-radius: 2em;
+    color: var(--clr-white);
     cursor: pointer;
+    font-size: calc(var(--button-scale) * 1rem);
+    padding: .5em 1.25em;
     transition: transform 100ms;
 }
 
