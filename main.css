@@ -61,6 +61,7 @@ p, dt, .light_fonts {
     line-height: 1;
     margin: 0 0 .15em; /*top right bottom*/
 }
+
 .title_center {
     color: var(--title-color_c, var(--clr-darkgrey));
     font-size: var(--title-size_c, 2.5rem); /*rem	Relative to font-size of the root element*/
