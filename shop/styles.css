@@ -1,0 +1,45 @@
+body {
+    background-color: light;
+}
+
+/* ====== Background images formats based on section ====== */
+.bck-images {
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: auto;
+    width: auto;
+}
+
+.welcome {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/pexels-felix-mittermeier-957002_welcome.jpg');
+}
+
+.tech {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/pexels_593322_tech.jpg');
+}
+
+.notes {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/pexels_733857_notes.jpg');
+}
+
+.gadgets {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/pexels_583848_gadgets.jpg');
+}
+
+.lifestyle {
+    background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/pexels_547114_lifestyle.jpg');
+}
+/* END of background images */
+
+/* Images responsive sequence of shaking */
+.image-shake:hover {
+    animation: shake 0.3s;
+    animation-iteration-count: infinite;  /* Last as much as needed */
+}
+  
+@keyframes shake { /* Can be smoother with more % */
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
