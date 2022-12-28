@@ -3,24 +3,29 @@
 <head> <!-- Holds information about the webpage -->
     <meta charset="utf-8">
     <meta name="description" content="Hello, this simple web displays my CV in basic html.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan's Webpage</title>
     <!-- Bootstrap -->
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="main.css">
     <link rel="icon" href="imagenes/favicon.ico">
 </head>
 <body>
     <a id="link_up" data-hs-anchor="true"></a>
     <!-- Navigation bar -->
-    <nav>
-        <div class="nav-menu">
-            <ul>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <!-- Navigation menu using checkbox for small screens -->
+            <input type="checkbox" id="checkbox_toggle" />
+            <!-- Include hamburger symbol -->
+            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
+            <div class="nav-menu">
                 <li><a href="#link_up" rel="noopener">Home</a></li>
                 <li><a href="experience.html" rel="noopener">Experience</a></li>
                 <li><a href="about_me.html" rel="noopener">About</a></li>
-                <li><a href="#link_contact" rel="noopener">Contact</a></li>
-                <li><a href="shop/shop_main.html" rel="noopener">Shop test page</a></li>               
-            </ul>
-        </div>
+                <li><a href="contact.html" rel="noopener">Contact</a></li>
+                <li><a href="shop/shop_main.html" rel="noopener">Bootstrap shop</a></li>
+            </div>
+        </ul>
     </nav>
     <br><br />
     <!-- End navigation bar -->
@@ -31,7 +36,7 @@
             <!-- From avataaars -->
             <img src="imagenes/jca.png" alt="Juan's avatar" height="200" width="200">
         </div>
-        <div class="container"> 
+        <div class="container">
             <h1 class="title">Welcome!</h1>
             <p class="light_fonts">My name is Juan, and I am a Spanish engineer with eight years of experience in FinTech (Financial Technology) consulting and six months experience in Python development with basic knowledge in Django and HTML/CSS.</p>
             <p class="light_fonts">GitHub profile:
@@ -42,7 +47,7 @@
             </p>
         </div>
     </section>
-    
+
     <!--To show education, technical skills and languages together-->
     <div class="container-lightblue">
         <div class="container-education">
@@ -83,7 +88,7 @@
     </div>
 
     <!--Certifications and courses-->
-    <section> 
+    <section>
         <div class="container-courses">
             <div class="sub-container-courses title">
                  <h2 class="title_center">Training, courses and other certifications</h2>
@@ -139,17 +144,6 @@
         </div>
     </section>
 
-    <!--Contact-->
-    <address style="margin-top: 1rem;">
-        <div class="container">
-            <a id="link_contact" data-hs-anchor="true"></a>
-            <h2 class="title">Contact information:</h2>
-            <p class="light_fonts">Mobile: (+44) 7764 712553</p>
-            <p class="light_fonts">E-mail: carcedo.juan@gmail.com</p>
-            <p class="light_fonts"><a href="https://www.linkedin.com/in/juancarcedoaldecoa/en">LinkedIn</a></p>
-            <p class="light_fonts"><a href="https://github.com/JuanCarcedo">GitHub</a></p>
-        </div>
-    </address>
     <div class="backButton">
         <button class="button-glowing" onclick="location.href='#link_up'">Go up</button>
     </div>
@@ -157,7 +151,7 @@
 
 <!-- Create virtual space below the button so the footer does not hide it.
 Note the footer will be "locked" always below of the page even if you scroll -->
-<br /><br />
+<br /><br /><br />
 <footer>
     <p>Juan Carcedo </p>
     <p>Copyright &copy; 2022-2023</p>
