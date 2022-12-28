@@ -262,6 +262,11 @@ a {
     display: grid;
 }
 
+.target.selected {
+    background-color: var(--clr-darkgrey);
+    color: var(--clr-blue-lig);
+}
+
 /*Fade contents for all courses
 This is used in conjunction with JS to hide and unhidden the
 contents in the courses section. */

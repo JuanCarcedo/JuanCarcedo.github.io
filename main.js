@@ -12,22 +12,30 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 /* Code to control the opacity of some items */
 document.getElementById("train2022").style.opacity = 1;
 function multipleFunctions(x) {
-    changeOpacity(x);
-}
-function changeOpacity(x) {
-    var a = 0;
-    var b = 0;
-    var c = 0;
-    var d = 0;
-    if (x === 2) {
+    // Only when clicked in the page.
+    // Remove the selected class (with highlighted background).
+    var classWhenSelected = "selected";
+    Array.prototype.forEach.call(
+        document.querySelectorAll("." + classWhenSelected), function(node){
+        node.classList.remove(classWhenSelected);
+    });
+
+    var a = b = c = d = 0;
+
+    if (x === 2) {  //link2
         b = 1;
-    } else if (x === 3) {
+        document.getElementById("link2").classList.add(classWhenSelected);
+    } else if (x === 3) { //link3
         c = 1;
-    }  else if (x === 4) {
+        document.getElementById("link3").classList.add(classWhenSelected);
+    }  else if (x === 4) {  //link4
         d = 1;
-    } else {
+        document.getElementById("link4").classList.add(classWhenSelected);
+    } else { //link1
         a = 1;
+        document.getElementById("link1").classList.add(classWhenSelected);
     }
+    // Change opacity based on which item was clicked.
     document.getElementById("train2022").style.opacity = a;
     document.getElementById("train2021").style.opacity = b;
     document.getElementById("train2018").style.opacity = c;
