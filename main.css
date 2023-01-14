@@ -90,7 +90,7 @@ a {
   }
   /* Change configuration when the link is visited. */
   a:visited {
-    color: pink;
+    color: var(--clr-blue-lig);
     background-color: transparent;
   }
 
@@ -102,7 +102,7 @@ a {
 
   /* Change configuration when the link is active. */
   a:active {
-    color: var(--clr-lightorange);
+    color: var(--clr-blue-dark);
     background-color: transparent;
   }
 
