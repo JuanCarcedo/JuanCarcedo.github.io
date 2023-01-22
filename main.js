@@ -10,7 +10,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 /* Code to control the opacity of some items */
-document.getElementById("train2022").style.opacity = 1;
+document.getElementById("back-end").style.opacity = 1;
 function multipleFunctions(x) {
     // Only when clicked in the page.
     // Remove the selected class (with highlighted background).
@@ -36,8 +36,8 @@ function multipleFunctions(x) {
         document.getElementById("link1").classList.add(classWhenSelected);
     }
     // Change opacity based on which item was clicked.
-    document.getElementById("train2022").style.opacity = a;
-    document.getElementById("train2021").style.opacity = b;
-    document.getElementById("train2018").style.opacity = c;
-    document.getElementById("train2017").style.opacity = d;
+    document.getElementById("back-end").style.opacity = a;
+    document.getElementById("front-end").style.opacity = b;
+    document.getElementById("other").style.opacity = c;
+    document.getElementById("SAP").style.opacity = d;
 }
