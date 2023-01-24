@@ -1,5 +1,5 @@
 # JuanCarcedo.github.io
-Hello! This is my first website, I am trying to create a website where I can post simple programs and my CV. Note that, for now, this is a simple CV display.  
+Hello! This is my first website, I am trying to create a website where I can post simple programs.   
 Included a test shop with bootstrap.  
 Check it here: [Website](https://juancarcedo.github.io/)
 
