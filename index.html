@@ -2,10 +2,11 @@
 <html> <!-- Everything in between is html -->
 <head> <!-- Holds information about the webpage -->
     <meta charset="utf-8">
-    <meta name="description" content="Hello, this simple web displays my CV in basic html.">
+    <meta name="description" content="Hello, this simple web would be my portfolio.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Juan's Webpage</title>
     <!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu+Mono" />
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="imagenes/favicon.ico">
 </head>
@@ -22,12 +23,11 @@
                 <li><a href="#link_up" rel="noopener">Home</a></li>
                 <li><a href="experience.html" rel="noopener">Experience</a></li>
                 <li><a href="about_me.html" rel="noopener">About</a></li>
-                <li><a href="contact.html" rel="noopener">Contact</a></li>
                 <li><a href="shop/shop_main.html" rel="noopener">Bootstrap shop</a></li>
             </div>
         </ul>
     </nav>
-    <br><br />
+    <!-- <br><br /> ONLY FOR FROZEN NAV -->
     <!-- End navigation bar -->
 
     <!--intro-->
@@ -36,8 +36,10 @@
             <!-- From avataaars -->
             <img src="imagenes/jca.png" alt="Juan's avatar" height="200" width="200">
         </div>
+        <h1 class="title_center">
+            <span class="horizontal-line"> Welcome! </span>
+        </h1>
         <div class="container">
-            <h1 class="title">Welcome!</h1>
             <p class="light_fonts">
                 I am a self-learner finance systems expert with 8+ years of experience in automation. Reducing front-end interaction with systems, increasing performance (back-end), and simplifying processes.
             </p>
@@ -60,61 +62,42 @@
 
     <!--Programming languages-->
     <section>
-        <div class="container-courses">
-            <div class="sub-container-courses title">
-                 <h2 class="title_center">Skills</h2>
-            </div>
-            <div class="sub-container-courses items">
-                <div data-widget="dyntabs" class="graph-tabs" role="toolbar">
-                    <div class="grid-container"> <!-- For tabs-->
-                        <ul class="courses-navigation courses-navigation-tab">
-                            <!-- Note empty anchor references, this is just to use the formats of a.
-                             It will allow for smoothing transition between years in the web.
-                             Please do test this in a browser rather than PyCharm-->
-                            <li>
-                                <a id="link1" onclick="multipleFunctions(1)" href="#link1" class="target selected">Back-End</a>
-                            </li>
-                            <li>
-                                <a id="link2" onclick="multipleFunctions(2)" href="#link2" class="target">Front-End</a>
-                            </li>
-                            <li>
-                                <a id="link3" onclick="multipleFunctions(3)" href="#link3" class="target">Other</a>
-                            </li>
-                            <li>
-                                <a id="link4" onclick="multipleFunctions(4)" href="#link4" class="target">SAP</a>
-                            </li>
-                        </ul>
+        <h1 class="title_center">
+            <span class="horizontal-line"> Skills </span>
+        </h1>
+        <div class="container empty">
+            <div data-widget="dyntabs" class="graph-tabs" role="toolbar">
+                <div class="skillsbar skills"> <!--grid-container For tabs-->
+                    <ul class="skills-links skills"> <!-- navigation-buttons -->
+                        <input type="checkbox" id="checkbox_toggle_2" />
+                        <!-- Include hamburger symbol -->
+                        <label for="checkbox_toggle_2" class="hamburger">Select!</label>
+                        <div class="skills-menu">
+                            <li><a id="link1" onclick="multipleFunctions(1)" href="#" class="target selected">Back-End</a></li>
+                            <li><a id="link2" onclick="multipleFunctions(2)" href="#" class="target">Front-End</a></li>
+                            <li><a id="link3" onclick="multipleFunctions(3)" href="#" class="target">More</a></li>
+                            <li><a id="link4" onclick="multipleFunctions(4)" href="#" class="target">Other</a></li>
+                        </div>
+                    </ul>
+                </div>
+                <div class="tab-content"> <!--For content-->
+                    <div id="back-end" class="tab-pane backEnd">
+                        <img src="imagenes/Python-logo-notext.svg" alt="python3" width= "80" style="margin: 20px;">
+                        <img src="imagenes/kivy-icon-256.png" alt="kivy_basic" width= "80" style="margin: 20px;">
+                        <img src="imagenes/Django_logo.svg" alt="django_basic" width= "140" style="margin: 20px;">
                     </div>
-                    <div class="tab-content"> <!--For content-->
-                        <div id="back-end" class="tab-pane backEnd">
-                            <ul>Languages / libraries:
-                                <li>Python</li>
-                                <li>Django (basic)</li>
-                                <li>Kivy</li>
-                            </ul>
-                        </div>
-                        <div id="front-end" class="tab-pane frontEnd">
-                            <ul> Languages:
-                                <li>HTML</li>
-                                <li>CSS</li>
-                                <li>JS</li>
-                            </ul>
-                            <p class="light_fonts">Bootstrap</p>
-                        </div>
-                        <div id="other" class="tab-pane otherSkills">
-                            <ul>
-                                <li>GitHub</li>
-                                <li>PyCharm</li>
-                                <li>Visual Studio Code</li>
-                                <li>Anaconda (Spyder)</li>
-                            </ul>
-                            <p class="light_fonts">Excel Macros (VBA)</p>
-                        </div>
-                        <div id="SAP" class="tab-pane sap">
-                            <p class="light_fonts">SAP BPC</p>
-                            <p class="light_fonts">BW</p>
-                            <p class="light_fonts">AFO</p>
-                        </div>
+                    <div id="front-end" class="tab-pane frontEnd">
+                        <img src="imagenes/HTML_CSS_JS.png" alt="html_css_js" width="200" style="margin: 20px;">
+                    </div>
+                    <div id="more" class="tab-pane otherSkills">
+                        <img src="imagenes/github-mark.png" alt="github" width="70" style="margin: 20px;">
+                        <img src="imagenes/PyCharm_Icon.svg" alt="pycharm" width="70" style="margin: 20px;">
+                        <img src="imagenes/vsc.png" alt="visual_studio_code" width="70" style="margin: 20px;">
+                        <img src="imagenes/Anaconda_Logo.png" alt="anaconda" width="120" style="margin: 20px;">
+                    </div>
+                    <div id="other" class="tab-pane sap">
+                        <img src="imagenes/sap.PNG.jpg" alt="sap" width="120" style="margin: 20px;">
+                        <img src="imagenes/vba.jpg" alt="vba" width="120" style="margin: 20px;">
                     </div>
                 </div>
             </div>
@@ -122,7 +105,7 @@
     </section>
 
     <div class="backButton">
-        <button class="button-glowing" onclick="location.href='#link_up'">Go up</button>
+        <button class="button-glowing" onclick="location.href='#link_up'">Up</button>
     </div>
 </body>
 
@@ -138,7 +121,7 @@ Note the footer will be "locked" always below of the page even if you scroll -->
             <img src="imagenes/icon_linkedin.png" alt="LinkedIn">
         </a>
         <a href="https://github.com/JuanCarcedo" target="_blank" rel="noopener noreferrer">
-            <img src="imagenes/github-mark.png" alt="GitHub">
+            <img src="imagenes/github-mark-white.png " alt="GitHub">
         </a>
     </div>
 </footer>

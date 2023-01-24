@@ -43,9 +43,9 @@ a {
 
   /* Main body  --------------------------------------------------*/
   html, body {
-      background: var(--clr-body);
+      /* background: var(--clr-body); */
       color: var(--clr-blue-dark);
-      font-family: basic-sans, Sans-Serif;
+      font-family: "Ubuntu Mono"; /*basic-sans, Sans-Serif;*/
       font-size: 1.12em; /*em	Relative to the font-size of the element (2em means 2 times the size of the current font)*/
       height: 100%;
       line-height: 1.5;
@@ -58,31 +58,45 @@ a {
   }
 
   /* Default definition of fonts in the page */
-  p, dt, .light_fonts {
+  p, dt, .light_fonts, .dark_fonts {
       margin: .5em 0 .5em 0;
   }
 
-  /* Color for light fonts */
+  /* Color for fonts */
   .light_fonts{
       color: var(--clr-light);
   }
 
+.dark_fonts{
+    color: var(--clr-darkgrey);
+}
+
 
   /* Title is used for headers */
-  .title {
-      color: var(--title-color, var(--clr-darkgrey));
-      font-size: var(--title-size, 2.5rem); /*rem	Relative to font-size of the root element*/
-      line-height: 1;
-      margin: 0 0 .15em; /*top right bottom*/
+.title {
+    color: var(--title-color, var(--clr-darkgrey));
+    font-size: var(--title-size, 2.5rem); /*rem	Relative to font-size of the root element*/
+    line-height: 1;
+    margin: 0 0 .15em; /*top right bottom*/
   }
 
-  .title_center {
-      color: var(--title-color_c, var(--clr-darkgrey));
-      font-size: var(--title-size_c, 2.5rem); /*rem	Relative to font-size of the root element*/
-      line-height: 1;
-      margin: 0 0 .15em; /*top right bottom*/
-      text-align: center;
+.title_center {
+    color: var(--title-color, var(--clr-darkgrey));
+    font-size: var(--title-size, 2.5rem); /*rem	Relative to font-size of the root element*/
+    line-height: 1;
+    margin: 0 0 .15em; /*top right bottom*/
+    text-align: center;
   }
+
+.horizontal-line::after, .horizontal-line::before {
+    content: "";
+    display: inline-block;
+    border: 0.09rem solid;
+    border-color: var(--clr-bck);
+    margin-left: 2px;
+    margin-bottom: 3px;
+    width:20vw;
+}
 
   /*Standard for links*/
   a:link {
@@ -106,168 +120,78 @@ a {
     background-color: transparent;
   }
 
-  /* Container with black background */
-  .container{
-      background: var(--clr-blue-med);
-      border-radius: var(--border-round); /* Smooth corners */
-      padding: 0.5em 2em/*calc(.5em + 1vw)*/;
-      width: var(--width-elements);
-      margin-inline: auto;
-      /*width: 80vw;
-      margin: 1em auto;*/ /*Center block after set width*/
-      --title-color: var(--clr-light);
-  }
-
-/* Experience page*/
-.container-experience{
-    background: var(--clr-light);
-    border-radius: var(--border-round); /* Smooth corners */
-    padding: 0.5em 2em/*calc(.5em + 1vw)*/;
-    width: var(--width-elements);
-    margin-inline: auto;
-    /*width: 80vw;
-    margin: 1em auto;*/ /*Center block after set width*/
-    --title-color: var(--clr-blue-dark);
-}
-
-/* About me page */
-.container-about{
-    background: var(--clr-light);
-    border-radius: var(--border-round); /* Smooth corners */
-    padding: 0.5em 2em/*calc(.5em + 1vw)*/;
-    width: var(--width-elements);
-    margin-inline: auto;
-    /*width: 80vw;
-    margin: 1em auto;*/ /*Center block after set width*/
-    --title-color: var(--clr-blue-dark);
-}
-.container-about p {
-    color: var(--clr-blue-dark);
-}
-
-.container-lightblue{
-    background: var(--clr-blue-lig);
-    border-radius: var(--border-round);
-    display: grid;
-    /*Auto order the grid based on screen*/
-    grid: auto / repeat(auto-fit, minmax(250px, 1fr)); /*fr = fraction*/
-    /*Gap between members in the grid*/
-    grid-gap: 1em;
-    padding: calc(.5em + 1vw);
-    width: 80vw; margin: 1em auto; /* Center it */
-}
-
-  /* Education block -------------------------------------------------- */
-
-  .container-education{
-      background: var(--clr-blue-med);
-      border-radius: var(--border-round);
-      color: var(--clr-white);
-      padding: 2em 2vw;
-      --title-color_c: var(--clr-lightgray);
-  }
-
-  .list_tick{
-      color: var(--clr-white);
-      display: block;
-      list-style: none;
-      text-align: left;
-  }
-  /* Definitions for members li inside list_tick */
-  .list_tick li {
-      margin: 0 0 .5em 0;
-  }
-
-  .list_tick li:before{
-      color: var(--clr-white);
-      display: inline-block;
-      margin: .5em 0 0 0;
-      font-size: .8em;
-      font-weight: 900;
-  }
-
-  /* Courses block -------------------------------------------------- */
-.container-courses{
-    background: var(--clr-blue-dark);
-    border-radius: var(--border-round); /* Smooth corners */
-    display: grid;
-    /*Auto order the grid based on screen*/
-    grid: auto / repeat(auto-fit, minmax(250px, 1fr)); /*fr = fraction*/
-    /*Gap between members in the grid*/
-    grid-gap: 1em;
-    padding: calc(.5em + 1vw);
-    width: 80vw; margin:0 auto; /*Center block after set width*/
-    --title-color: var(--clr-green); /* Only apply to header inside this container */
-    --title-size: 1.5rem;
-}
-
-.sub-container-courses{
+.container{
     background: var(--clr-blue-med);
-    border-radius: var(--border-round);
-    color: var(--clr-white);
-    padding: 2em 2vw;
-    --title-color_c: var(--clr-lightgray);
+    border-radius: var(--border-round); /* Smooth corners */
+    padding: 0.5em 2em/*calc(.5em + 1vw)*/;
+    width: var(--width-elements);
+    margin-inline: auto;
+    --title-color: var(--clr-light);
+    margin-top: 10px;
 }
 
-.sub-container-courses.title {
-    grid-column: 1;
-    grid-row: 1;
+.empty{
+    background: white;
+    width: calc(var(--width-elements) * .5);
 }
-.sub-container-courses.items {
-    grid-column: 1;
-    grid-row: 2;
+
+/* Skills block -------------------------------------------------- */
+.skillsbar { /* Container of full bar */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Distribute in line */
+    padding: 10px;
+    background-color: var(--clr-blue-med);
+    color: azure;  /* Color of text */
+}
+/* Get rid of bullets in list only under navbar */
+.skillsbar li {
+    list-style: none;
+}
+.skills-links a {
+    color: azure;
+}
+
+/* Navbar links (menu) */
+.skills-menu {
+    display: flex;
+    gap: 1em; /* Add space between members */
+    font-size: 18px;
+}
+/* Hover effect */
+.skills-menu li:hover{
+    background-color: var(--clr-blue-fade);
+    border-radius: 5px; /* Use rounded borders */
+    transition: 0.3 ease; /* 0.3 ease type transition (fast-slow-fast) */
+}
+
+.skills-menu li {
+    padding: 5px 14px;
 }
 
 .tab-content ul {
-    color: var(--clr-white);
+    color: var(--clr-darkgrey);
     list-style-position: inside;
     margin: .5em 0 .5em 0;
 }
 
 .tab-content li {
-    color: var(--clr-white);
+    color: var(--clr-darkgrey);
 }
 
 /* Code for multiple selection in training courses and certifications*/
-.courses-navigation {
-    background-color: var(--clr-light);
-    border-radius: 5px;
-    list-style: none;
-    margin-bottom: 0;
-    overflow: hidden;
-    padding-left: 0; /* Override default ul/ol */
-    text-decoration: none;
-}
-.courses-navigation a {
-    border-radius: 5px;
-    color: var(--clr-blue-dark);
-    float: left;
-    padding: 14px 16px;
-    text-align: center;
-    text-decoration: none;
-}
-.courses-navigation a:hover{
-    background-color: var(--clr-darkgrey);
-    color: var(--clr-blue-lig);
-}
-/* Get rid of link's underline*/
-.courses-navigation a:link,
- .courses-navigation a:hover,
-  .courses-navigation a:active,
-   .courses-navigation a:visited {
-    text-decoration: none;
-}
 
 .tab-content {
     display: grid;
+    align-items: center;
+    justify-items: center;
 }
 
 .target.selected {
-    background-color: var(--clr-darkgrey);
-    color: var(--clr-blue-lig);
+    color: var(--clr-darkgrey);
 }
 
-/*Fade contents for all courses
+/*Fade contents for all skills
 This is used in conjunction with JS to hide and unhidden the
 contents in the courses section. */
 .tab-pane {
@@ -316,10 +240,18 @@ contents in the courses section. */
 .nav-menu li {
     padding: 5px 14px;
 }
+
+/* Skills */
+.skills {
+    border-radius: 10px;
+}
+
+
 /* For mobile devices ---------*/
 input[type=checkbox] {
     display: none; /* Make checkbox vanish*/
 }
+
 .hamburger {
     display: none;
     font-size: 24px;
@@ -328,7 +260,6 @@ input[type=checkbox] {
 .hamburger:hover {
     cursor: pointer;
 }
-
 
 /* Queries */
 @media (max-width: 768px) {
@@ -350,9 +281,15 @@ input[type=checkbox] {
     .nav-menu li + li {
         margin-top: 12px;
     }
+
     input[type=checkbox]:checked ~ .nav-menu {
         display: block;
     }
+
+    input[type=checkbox_2]:checked ~ .grid-container {
+        display: block;
+    }
+
     .hamburger {
         display: block;
     }
@@ -441,6 +378,7 @@ transform: scale(1.1);
       width: 25px;
       height: 25px;
       margin-right: 25px;
+      border-radius: 10px;
   }
 
   /* Get rid of link's underline*/
@@ -453,40 +391,3 @@ transform: scale(1.1);
   }
 
   /* FOOTER */
-
-
-/* Backup code
-Old navigational bar
-  .nav-menu {
-        background-color: var(--clr-blue-med);
-        overflow: hidden;
-        position: fixed;  /* Sticky bar *//*
-        width: 100vw;
-    }
-
-  .nav-menu a {
-      color: var(--clr-blue-dark);
-      float: left;
-      text-align: center;
-      text-decoration: none;
-      padding: 14px 16px;
-      border-radius: 2em;
-  }
-  .nav-menu a:hover{
-      background-color: var(--clr-darkgrey);
-      color: var(--clr-blue-lig);
-  }
-
-  /* Get rid of link's underline
-  .nav-menu a:link, .nav-menu a:hover, .nav-menu a:active, .nav-menu a:visited {
-      text-decoration: none;
-  }
-
-  .nav-menu ul,
-  .nav-menu li {
-    display: flex;
-    text-decoration: none;
-    align-items: center;
-    justify-content: center;
-  }
-*/
