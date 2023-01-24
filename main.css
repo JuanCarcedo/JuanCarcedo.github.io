@@ -120,7 +120,7 @@ a {
     background-color: transparent;
   }
 
-.container{
+.bucket{
     background: var(--clr-blue-med);
     border-radius: var(--border-round); /* Smooth corners */
     padding: 0.5em 2em/*calc(.5em + 1vw)*/;
@@ -136,7 +136,7 @@ a {
 }
 
 /* Skills block -------------------------------------------------- */
-.skillsbar { /* Container of full bar */
+.skillsbar { /* bucket of full bar */
     display: flex;
     align-items: center;
     justify-content: center; /* Distribute in line */
@@ -208,7 +208,7 @@ contents in the courses section. */
 /* Navigation bars -------------------------------------------------- */
 /* Top menu navigation bar*/
 
-.navbar { /* Container of full bar */
+.navbar { /* bucket of full bar */
     display: flex;
     align-items: center;
     justify-content: center; /* Distribute in line */
@@ -283,10 +283,6 @@ input[type=checkbox] {
     }
 
     input[type=checkbox]:checked ~ .nav-menu {
-        display: block;
-    }
-
-    input[type=checkbox_2]:checked ~ .grid-container {
         display: block;
     }
 
@@ -386,8 +382,34 @@ transform: scale(1.1);
       text-decoration: none;
   }
 
-  .container-images {
+  .bucket-images {
       margin-top: 0.5em;
   }
 
   /* FOOTER */
+
+/* Bootstrap */
+  /* Center align the text within the three columns below the carousel */
+  .marketing .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+  /* rtl:begin:ignore */
+  .marketing .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+  }
+  /* rtl:end:ignore */
+
+  /* Featurettes
+  ------------------------- */
+  /* Thin out the marketing headings */
+  .featurette-heading {
+    letter-spacing: -.05rem;
+  }
+
+  @media (min-width: 40em) {
+    .featurette-heading {
+      font-size: 50px;
+    }
+  }
