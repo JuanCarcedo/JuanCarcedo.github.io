@@ -282,6 +282,10 @@ input[type=checkbox] {
         width: calc(var(--width-elements) * .5);
     }
 
+    .skillsbar {
+        display: grid;
+    }
+
 } /* END MEDIA MAX-WIDTH 768px*/
 
 
