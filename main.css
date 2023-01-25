@@ -8,18 +8,13 @@ Basic start for a webpage (get rid of some default values)
     --clr-accent: #006270;
     --clr-bck: #3b3a3a;
     --clr-darkgrey: #333;
-    --clr-green: #0C8054;
-    --clr-lightgray: #ddd;
-    --clr-lightorange: #F3603C;
     --clr-white: #efefef;
     /* Variables for all page */
     --clr-body: white; /*#efefef;*/
-    --clr-body-gray: #d8dbdd;
     --clr-light: #F9F7F0;
     --clr-blue-lig: #18B7BE;
     --clr-blue-med: #178CA4;
     --clr-blue-fade: #6c9aa3;
-    --clr-blue-dark: #072A40;
     /* Responsive webpage */
     --width-elements: min(100% - 1rem, 90vw);
     /* Others */
@@ -133,7 +128,6 @@ a {
 
 .empty{
     background: var(--clr-body);
-    width: calc(var(--width-elements) * .5);
 }
 
 /* Skills block -------------------------------------------------- */
@@ -141,33 +135,26 @@ a {
     display: flex;
     align-items: center;
     justify-content: center; /* Distribute in line */
-    padding: 10px;
-    background-color: var(--clr-blue-med);
-    color: azure;  /* Color of text */
-}
-/* Get rid of bullets in list only under navbar */
-.skillsbar li {
-    list-style: none;
-}
-.skills-links a {
-    color: azure;
+    gap: 1em;
+    margin-bottom: 10px;
 }
 
-/* Navbar links (menu) */
-.skills-menu {
-    display: flex;
-    gap: 1em; /* Add space between members */
-    font-size: 18px;
+.skillsbar button {
+    background: var(--clr-blue-med);
+    border: 0;
+    border-radius: 2em;
+    color: var(--clr-white);
+    cursor: pointer; /* Change the cursor when over the button. */
+    font-size: calc(var(--button-scale) * 1rem);
+    padding: .5em 1.25em;
+    transition: transform 100ms; /*Used for simple effect when hovering*/
 }
+
 /* Hover effect */
-.skills-menu li:hover{
+.skillsbar button:hover{
     background-color: var(--clr-blue-fade);
-    border-radius: 5px; /* Use rounded borders */
-    transition: 0.3 ease; /* 0.3 ease type transition (fast-slow-fast) */
-}
-
-.skills-menu li {
-    padding: 5px 14px;
+    color: var(--clr-white);
+    transform: scale(1.1);
 }
 
 .tab-content ul {
@@ -180,8 +167,8 @@ a {
     color: var(--clr-darkgrey);
 }
 
-/* Code for multiple selection in training courses and certifications*/
 
+/* Multiple selection */
 .tab-content {
     display: grid;
     align-items: center;
@@ -189,7 +176,8 @@ a {
 }
 
 .target.selected {
-    color: var(--clr-darkgrey);
+    border-radius: 0.5em;
+    background-color: var(--clr-darkgrey);
 }
 
 /*Fade contents for all skills
@@ -247,12 +235,6 @@ contents in the courses section. */
     padding: 5px 14px;
 }
 
-/* Skills */
-.skills {
-    border-radius: 10px;
-}
-
-
 /* For mobile devices ---------*/
 input[type=checkbox] {
     display: none; /* Make checkbox vanish*/
@@ -295,6 +277,11 @@ input[type=checkbox] {
     .hamburger {
         display: block;
     }
+
+    .empty {
+        width: calc(var(--width-elements) * .5);
+    }
+
 } /* END MEDIA MAX-WIDTH 768px*/
 
 
@@ -380,7 +367,7 @@ transform: scale(1.1);
       width: 25px;
       height: 25px;
       margin-right: 25px;
-      border-radius: 10px;
+      border-radius: var(--border-round);
   }
 
   /* Get rid of link's underline*/
@@ -389,8 +376,8 @@ transform: scale(1.1);
   }
 
   .bucket-images {
-      margin-top: 0.5em;
-  }
+    margin-top: 0.5em;
+}
 
   /* FOOTER */
 
