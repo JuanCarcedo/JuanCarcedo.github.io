@@ -5,6 +5,7 @@
     <meta name="description" content="Hello, this simple web would be my portfolio.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Experience</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu+Mono" />
     <link rel="stylesheet" href="main.css">
     <link rel="icon" href="imagenes/favicon.ico">
@@ -26,92 +27,236 @@
             </div>
         </ul>
     </nav>
-    <br /><br /><br />
+    <!-- <br><br /> ONLY FOR FROZEN NAV -->
     <!-- End navigation bar -->
 
     <main>
         <h1 class="title_center">
-            <span class="horizontal-line"> Programming experience </span>
+            <span class="horizontal-line"> Programming </span>
         </h1>
-        <div class="bucket"> <!--To show experience-->
-            <p class="light_fonts">Although I developed more than 30 programs using Python,
-                I only uploaded into GitHub the most interesting ones.</p>
-        </div>
-
-        <div class="bucket" style="color: azure;">
-            <dl>
-                <dt>
-                    <u><em>Using Python:</em></u>
-                </dt>
-                    <dd>- Password generator and storage.
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Password%20Generator"> See code</a></dd>
-                    <dd>- Flash Cards: A game to learn Spanish.
-                     <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Flash%20Cards"> See code</a>
-                    </dd>
-                    <dd>- Turtle Crossing: Reach higher levels reaching the other side of the big road.
-                     <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Turtle%20Crossing"> See code</a>
-                    </dd>
-                    <dd>- Dataframe Check: Class to do some basic first checks to a set of data in Pandas.
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Dataframe%20Check"> See code</a>
-                    </dd>
-                    <dd>- Email platform simple simulator: Simulator of an inbox.
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Email%20platform%20simulator"> See code</a>
-                    </dd>
-                    <dd>- Warehouse: Implementation of an inventory management using txt as database.
-                        <a href="https://github.com/JuanCarcedo/Warehouse"> See code</a>
-                    </dd>
-            </dl>
-        </div>
-        <div class="bucket" style="color: azure;">
-            <dl>
-                <dt>Other/simpler:</dt>
-                    <dd>- File check data: Initial checks (counting items) for txt files.
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Without%20OOP/File%20check%20data"> See code</a>
-                    </dd>
-                    <dd>- Files - Function Converter: Gather data from a file, execute the calculations required and then save the results into another file.
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Without%20OOP/Files%20-%20Function%20Converter"> See code</a>
-                    </dd>
-                    <dd>- Task Manager: Base for a task manager program with admin and user menus and options.
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Without%20OOP/Task%20Manager"> See code</a>
-                    </dd>
-                    <dd>- finance_calculator: Interest calculation on a loan or an investment (simple, compound).
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Without%20OOP"> See code</a>
-                    </dd>
-                <dt>With SQLite db:</dt>
-                    <dd>- SQLite Test: Class to manage/handle simple SQLite requests (create table, update table...).
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/SQLite%20Test"> See code</a>
-                    </dd>
-                    <dd>- Bookstore: Manage a bookstore's database.
-                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Bookstore"> See code</a>
-                    </dd>
-            <dt>App with Kivy <strong>(WIP)</strong>:
-                <a href="https://github.com/JuanCarcedo/PythonTester_App"> See code</a>
-            </dt>
-            <p><br /></p>
-            </dl>
-        </div>
-        <div class="bucket" style="color: azure;">
-            <dl>
-                <dt>
-                    <u><em>Development with HTML, CSS and JS</em></u>
-                </dt>
-                    <dd>Well, this webpage!
-                        <a href="https://github.com/JuanCarcedo/JuanCarcedo.github.io#juancarcedogithubio"> See code</a></dd>
-                    <dd>Shop with Bootstrap.
-                     <a href="https://github.com/JuanCarcedo/JuanCarcedo.github.io/tree/main/shop"> See code</a>
-                    </dd>
-            </dl>
+        <div class="container">
+            <p class="lead ">
+                Although I developed more than 30 programs using Python,
+                I only uploaded into GitHub the most interesting ones.<br>
+                <span class="text-muted">This <a href="https://github.com/JuanCarcedo/JuanCarcedo.github.io#juancarcedogithubio">web</a> and
+                    the <a href="https://github.com/JuanCarcedo/JuanCarcedo.github.io/tree/main/shop"> Bootstrap shop</a> are the only "life" projects that
+                    I have with HTML, CSS and JS.
+                </span>
+            </p>
+            <hr class="featurette-divider">
+            <h2 class="featurette-heading fw-normal lh-1 text-center">Python</h2>
+            <p class="lead text-center">
+                <span class="text-muted text-center">Kivy, Tkinter (GUI), Kivy (GUI), SQL (interaction), Pandas, Django</span>
+            </p>
         </div>
     </main>
-    <br /><br />
+
+    <!-- Main programs -->
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators"> <!-- As many as slides -->
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+        </div>
+
+
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active">
+                <div class="overlay-image" style="background-image: url(./imagenes/python_programs/password_storage.jpg)"></div>
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>Password generator and storage</h1>
+                        <p>I created this program because I was tired of thinking where did I put my notes with passwords.
+                            I am not good at all to remember 100 passwords from different websites so, this program helped me a lot.</p>
+                        <p><a class="btn btn-lg btn-primary" href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Password%20Generator">See code</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 2 -->
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url(./imagenes/python_programs/flashcards.jpg)"></div>
+                <div class="container">
+                    <div class="carousel-caption">
+                        <h1>Flash Cards</h1>
+                        <p>This program may help you in your path to learn spanish.
+                            Note that your user will be used to save your already-known words and the ones to be learnt.</p>
+                        <p>Sorry for the UI...</p>
+                        <p><a class="btn btn-lg btn-primary" href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Flash%20Cards">See code</a></p>
+                    </div>
+                </div>
+            </div>
+            <!-- Slide 3 -->
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url(./imagenes/python_programs/turtle.jpg)"></div>
+                <div class="container">
+                <div class="carousel-caption">
+                    <h1>Turtle Crossing</h1>
+                    <p>This is the first game I created. Later I also did a snake and tried to develop something in PyGame following a tutorial.
+                        The goal of this game is to make the Turtle cross safely the road.</p>
+                    <p><a class="btn btn-lg btn-primary" href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Turtle%20Crossing">See code</a></p>
+                </div>
+                </div>
+            </div>
+            <!-- Slide 4 -->
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url(./imagenes/python_programs/df_check.jpg)"></div>
+                <div class="container">
+                <div class="carousel-caption">
+                    <h1>Dataframe Check</h1>
+                    <p>
+                        I developed this class to generate an overview of a new set of data.
+                        I was learning Data Science and Pandas. As I was nearly doing these checks every time I found a new set of data, I decided to create a class and re-use it.
+                        <br>It is intended to give a detailed overview of a csv using Pandas.
+                    </p>
+                    <p><a class="btn btn-lg btn-primary" href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Dataframe%20Check">See code</a></p>
+                </div>
+                </div>
+            </div>
+            <!-- Slide 5 -->
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url(./imagenes/python_programs/email.jpg)"></div>
+                <div class="container">
+                <div class="carousel-caption">
+                    <h1>Email platform simple simulator</h1>
+                    <p>
+                        I used this program as part of an exercise to show a basic structure of an email handler program.
+                        I know it can be updated using smtplib and a proper password; suggested code in GitHub.
+                    </p>
+                    <p><a class="btn btn-lg btn-primary" href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Email%20platform%20simulator">See code</a></p>
+                </div>
+                </div>
+            </div>
+            <!-- Slide 6 -->
+            <div class="carousel-item">
+                <div class="overlay-image" style="background-image: url(./imagenes/python_programs/warehouse.jpg)"></div>
+                <div class="container">
+                <div class="carousel-caption text-end">
+                    <h1>Warehouse</h1>
+                    <p>This is a learning project with OOP and file handling.
+                        Note the data is stored in txt, if you are a learner,
+                        you can create a fork of the repository and include data handling with SQLite or another database.</p>
+                    <p><a class="btn btn-lg btn-primary" href="https://github.com/JuanCarcedo/Warehouse">See code</a></p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- Controls of the carousel -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+
+    <!-- SQL Programs -->
+    <div class="container mt-4">
+        <hr class="featurette-divider">
+        <h3 class="text-center">With SQL (Python controlled)</h3>
+        <div class="row gap-4 d-flex justify-content-center">
+            <!-- SQLite Test program -->
+            <div class="card" style="width: 28rem;">
+                <div class="card-body">
+                    <h5 class="card-title">SQLite Test</h5>
+                    <p class="card-text">I created this class as a blueprint to be used in other personal projects.
+                        You can see me using it in the Kivy App and the Bookstore program.
+                    </p>
+                    <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/SQLite%20Test" class="btn btn-primary">See code</a>
+                </div>
+            </div>
+            <!-- Bookstore program -->
+            <div class="card" style="width: 28rem;">
+                <div class="card-body">
+                    <h5 class="card-title">Bookstore</h5>
+                    <p class="card-text">This program is meant to be a replica of a bookstore management system (no GUI).
+                        I am trying to show how to use a SQLite DB to store the bookstore data.</p>
+                    <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Bookstore" class="btn btn-primary">See code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- App with Kivy program -->
+    <div class="container mt-4">
+        <hr class="featurette-divider">
+        <h3 class="text-center">App with Kivy</h3>
+        <div class="row gap-4 d-flex justify-content-center">
+            <div class="card" style="width: 28rem;">
+                <img src="imagenes/python_programs/app_kivy.PNG" alt="kivy_landing" class="card-img-top">
+                <div class="card-body">
+                    <h5 class="card-title">Python Tester</h5>
+                    <p class="card-text">
+                        I started this app as a next challenge in my career. I wanted to merge my skills in backend with a frontend interaction with a customer.<br>
+                        <span class="text-muted">For now, I included a login system with a database (SQLite) which you can see in the images below.</span>
+                    </p>
+                    <a href="https://github.com/JuanCarcedo/PythonTester_App" class="btn btn-primary">See code</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Other programs -->
+    <div class="container mt-4">
+        <hr class="featurette-divider">
+        <h3 class="text-center">Other small projects</h3>
+        <div class="row gap-4">
+            <div class="row">
+                <!-- Check txt file -->
+                <div class="card" style="width: 28rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">File check data</h5>
+                        <p class="card-text">
+                            Initial checks to perform to an unknown txt file.
+                        </p>
+                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Others/File%20check%20data" class="btn btn-primary">See code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- Task Manager program -->
+                <div class="card" style="width: 28rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Task Manager</h5>
+                        <p class="card-text">Base for a task manager program with admin and user menus and options.
+                            This program can (and should) be enhanced with OOP and a framework like Django.<br>
+                            <span class="text-muted">Maybe in the future!</span>
+                        </p>
+                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Others/Task%20Manager" class="btn btn-primary">See code</a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <!-- finance_calculator program -->
+                <div class="card" style="width: 28rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">Finance Interest Calculator</h5>
+                        <p class="card-text">
+                            Interest calculation on a loan or an investment (simple, compound).
+                        </p>
+                        <a href="https://github.com/JuanCarcedo/jca-python-projects/tree/main/Others/Finance%20Calculator" class="btn btn-primary">See code</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <hr class="featurette-divider">
+        <h3>
+            <p class="text-center text-body-tertiary">
+                I am always updating my projects, also, I am studying as much as possible with professional courses.
+            </p>
+        </h3>
+    </div>
 </body>
 
 <!-- END of page-->
-<!-- Create virtual space below the button so the footer does not hide it.
---Note the footer will be "locked" always below of the page even if you scroll
--- Only use when footer is position: fixed;
--->
-<!-- <br /><br /> -->
 <footer>
     <p>Juan Carcedo </p>
     <p>Copyright &copy; 2022-2023</p>
@@ -126,4 +271,6 @@
     </div>
 </footer>
 <script src="main.js"></script>
+<!-- Bootstrap js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 </html>
