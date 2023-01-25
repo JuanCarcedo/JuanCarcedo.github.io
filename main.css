@@ -13,7 +13,8 @@ Basic start for a webpage (get rid of some default values)
     --clr-lightorange: #F3603C;
     --clr-white: #efefef;
     /* Variables for all page */
-    --clr-body: #d8dbdd;
+    --clr-body: white; /*#efefef;*/
+    --clr-body-gray: #d8dbdd;
     --clr-light: #F9F7F0;
     --clr-blue-lig: #18B7BE;
     --clr-blue-med: #178CA4;
@@ -43,7 +44,7 @@ a {
 
   /* Main body  --------------------------------------------------*/
   html, body {
-      /* background: var(--clr-body); */
+      background: var(--clr-body);
       color: var(--clr-blue-dark);
       font-family: "Ubuntu Mono"; /*basic-sans, Sans-Serif;*/
       font-size: 1.12em; /*em	Relative to the font-size of the element (2em means 2 times the size of the current font)*/
@@ -81,7 +82,7 @@ a {
   }
 
 .title_center {
-    color: var(--title-color, var(--clr-darkgrey));
+    color: var(--title-color);
     font-size: var(--title-size, 2.5rem); /*rem	Relative to font-size of the root element*/
     line-height: 1;
     margin: 0 0 .15em; /*top right bottom*/
@@ -131,7 +132,7 @@ a {
 }
 
 .empty{
-    background: white;
+    background: var(--clr-body);
     width: calc(var(--width-elements) * .5);
 }
 
@@ -213,14 +214,18 @@ contents in the courses section. */
     align-items: center;
     justify-content: center; /* Distribute in line */
     padding: 10px;
-    background-color: var(--clr-blue-med);
-    color: azure;  /* Color of text */
+    background-color: var(--clr-body);/* var(--clr-blue-med);*/
+    color: var(--clr-darkgrey);  /* azure Color of text */
 }
 /* Get rid of bullets in list only under navbar */
 .navbar li {
     list-style: none;
 }
 .nav-links a {
+    color: var(--clr-darkgrey);
+}
+
+.nav-links a:hover {
     color: azure;
 }
 
@@ -234,7 +239,8 @@ contents in the courses section. */
 .nav-menu li:hover{
     background-color: var(--clr-blue-fade);
     border-radius: 5px; /* Use rounded borders */
-    transition: 0.3 ease; /* 0.3 ease type transition (fast-slow-fast) */
+    transition: 0.3 ease; /* 0.3 ease
+    fast-slow-fast) */
 }
 
 .nav-menu li {
@@ -357,9 +363,9 @@ transform: scale(1.1);
   /* Format of the footer */
 
   footer {
-      position: fixed;
+      position: relative; /* fixed if you want it frozen*/
       text-align: center;
-      background-color: var(--clr-blue-med);
+      background-color: var(--clr-darkgrey);
       padding: 0.2em;
       bottom: 0px;
       width: 100%;
@@ -390,12 +396,12 @@ transform: scale(1.1);
 
 /* Bootstrap */
   /* Center align the text within the three columns below the carousel */
-  .marketing .col-lg-4 {
+  .about-me .col-lg-4 {
     margin-bottom: 1.5rem;
     text-align: center;
   }
   /* rtl:begin:ignore */
-  .marketing .col-lg-4 p {
+  .about-me .col-lg-4 p {
     margin-right: .75rem;
     margin-left: .75rem;
   }
@@ -403,7 +409,7 @@ transform: scale(1.1);
 
   /* Featurettes
   ------------------------- */
-  /* Thin out the marketing headings */
+  /* Thin out the about-me headings */
   .featurette-heading {
     letter-spacing: -.05rem;
   }
