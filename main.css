@@ -117,7 +117,10 @@ a {
   }
 
   /* For light backgrounds*/
-  .a-light, .a-light:visited {
+  .a-light:link {
+    color: var(--clr-blue-med);
+  }
+  .a-light:visited {
     color: var(--clr-blue-med);
   }
 
