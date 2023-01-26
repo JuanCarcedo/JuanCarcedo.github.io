@@ -100,7 +100,7 @@ a {
   }
   /* Change configuration when the link is visited. */
   a:visited {
-    color: var(--clr-blue-lig);
+    color: var(--clr-white);
     background-color: transparent;
   }
 
@@ -114,6 +114,11 @@ a {
   a:active {
     color: var(--clr-blue-dark);
     background-color: transparent;
+  }
+
+  /* For light backgrounds*/
+  .a-light, .a-light:visited {
+    color: var(--clr-blue-med);
   }
 
 .bucket{
@@ -433,7 +438,7 @@ transform: scale(1.1);
   /* Declare heights because of positioning of img element */
   .carousel-item {
     height: 32rem;
-    background: #000;
+    background: var(--clr-darkgrey);
   }
   .overlay-image{
     position: absolute;
@@ -443,5 +448,5 @@ transform: scale(1.1);
     top: 0;
     background-position: center;
     background-size: cover;
-    opacity: 0.2;
+    opacity: 0.3;
 }
