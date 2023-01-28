@@ -7,117 +7,89 @@
     <title>Juan's Webpage</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu+Mono" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="imagenes/favicon.ico">
+    <link rel="stylesheet" href="components/main.css">
+    <link rel="icon" href="resources/images/favicon.ico">
+    <script src="components/navigation_menu.js" type="text/javascript" defer></script>
+    <script src="components/footer_pages.js" type="text/javascript" defer></script>
 </head>
 <body>
     <a id="link_up" data-hs-anchor="true"></a>
     <!-- Navigation bar -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <!-- Navigation menu using checkbox for small screens -->
-            <input type="checkbox" id="checkbox_toggle" />
-            <!-- Include hamburger symbol -->
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-            <div class="nav-menu">
-                <li><a href="#link_up" rel="noopener">Home</a></li>
-                <li><a href="experience.html" rel="noopener">Experience</a></li>
-                <li><a href="about_me.html" rel="noopener">About</a></li>
-                <li><a href="shop/shop_main.html" rel="noopener">Bootstrap shop</a></li>
+    <navigation-menu></navigation-menu>
+    <main>
+        <!--intro-->
+        <section>
+            <div style="text-align:center; margin-bottom: 1em;">
+                <!-- From avataaars -->
+                <img src="resources/images/jca.svg" alt="Juan's avatar" height="200" width="200">
             </div>
-        </ul>
-    </nav>
-    <!-- <br><br /> ONLY FOR FROZEN NAV -->
-    <!-- End navigation bar -->
+            <h1 class="title_center">
+                <span class="horizontal-line"> Welcome! </span>
+            </h1>
+            <div class="bucket">
+                <p class="light_fonts">
+                    I am a self-learner finance systems expert with 8+ years of experience in automation. Reducing front-end interaction with systems, increasing performance (back-end), and simplifying processes.
+                </p>
+                <p class="light_fonts">
+                    I have expertise in Python programming. Also, self-learned skills in front end (frameworks like Django and website development with HTML, CSS) and database (SQLite).
+                </p>
+                <p class="light_fonts">
+                    Growing interest in Machine Learning, automation and AI.
+                </p>
+                <p class="light_fonts">GitHub profile:
+                    <a href="https://github.com/JuanCarcedo" target="_blank" rel="noopener noreferrer">Click here</a>
+                </p>
+            </div>
+        </section>
 
-    <!--intro-->
-    <section>
-        <div style="text-align:center; margin-bottom: 1em;">
-            <!-- From avataaars -->
-            <img src="imagenes/jca.png" alt="Juan's avatar" height="200" width="200">
-        </div>
-        <h1 class="title_center">
-            <span class="horizontal-line"> Welcome! </span>
-        </h1>
-        <div class="bucket">
-            <p class="light_fonts">
-                I am a self-learner finance systems expert with 8+ years of experience in automation. Reducing front-end interaction with systems, increasing performance (back-end), and simplifying processes.
-            </p>
-            <p class="light_fonts">
-                I have expertise in Python programming. Also, self-learned skills in front end (frameworks like Django and website development with HTML, CSS) and database (SQLite).
-            </p>
-            <p class="light_fonts">
-                Growing interest in Machine Learning, automation and AI.
-            </p>
-            <p class="light_fonts">GitHub profile:
-                <a href="https://github.com/JuanCarcedo" target="_blank" rel="noopener noreferrer">Click here</a>
-            </p>
-        </div>
-    </section>
+        <br /><br />
 
-    <br /><br />
-
-    <!--Programming languages-->
-    <section>
-        <h1 class="title_center">
-            <span class="horizontal-line"> Skills </span>
-        </h1>
-        <div class="bucket empty">
-            <div data-widget="dyntabs" class="graph-tabs" role="toolbar">
-                <div class="skillsbar">
-                    <button id="link1" onclick="multipleFunctions(1)" class="target selected">Back-End</button>
-                    <button id="link2" onclick="multipleFunctions(2)" class="target">Front-End</button>
-                    <button id="link3" onclick="multipleFunctions(3)" class="target">More</button>
-                    <button id="link4" onclick="multipleFunctions(4)" class="target">Other</button>
-                </div>
-                <div class="tab-content"> <!--For content-->
-                    <div id="back-end" class="tab-pane backEnd">
-                        <img src="imagenes/Python-logo-notext.svg" alt="python3" width= "80" style="margin: 20px;">
-                        <img src="imagenes/kivy-icon-256.png" alt="kivy_basic" width= "80" style="margin: 20px;">
-                        <img src="imagenes/Django_logo.svg" alt="django_basic" width= "140" style="margin: 20px;">
+        <!--Programming languages-->
+        <section>
+            <h1 class="title_center">
+                <span class="horizontal-line"> Skills </span>
+            </h1>
+            <div class="bucket empty">
+                <div data-widget="dyntabs" class="graph-tabs" role="toolbar">
+                    <div class="skillsbar">
+                        <button id="link1" onclick="multipleFunctions(1)" class="target selected">Back-End</button>
+                        <button id="link2" onclick="multipleFunctions(2)" class="target">Front-End</button>
+                        <button id="link3" onclick="multipleFunctions(3)" class="target">Both-End</button>
+                        <button id="link4" onclick="multipleFunctions(4)" class="target">Others</button>
                     </div>
-                    <div id="front-end" class="tab-pane frontEnd">
-                        <img src="imagenes/html.jpg" alt="html_css_js" width="80" style="margin: 20px;">
-                        <img src="imagenes/css.jpg" alt="html_css_js" width="80" style="margin: 20px;">
-                        <img src="imagenes/js.jpg" alt="html_css_js" width="80" style="margin: 20px;">
-                    </div>
-                    <div id="more" class="tab-pane otherSkills">
-                        <img src="imagenes/github-mark.png" alt="github" width="70" style="margin: 20px;">
-                        <img src="imagenes/PyCharm_Icon.svg" alt="pycharm" width="70" style="margin: 20px;">
-                        <img src="imagenes/vsc.png" alt="visual_studio_code" width="70" style="margin: 20px;">
-                        <img src="imagenes/Anaconda_Logo.png" alt="anaconda" width="120" style="margin: 20px;">
-                    </div>
-                    <div id="other" class="tab-pane sap">
-                        <img src="imagenes/sap.PNG.jpg" alt="sap" width="120" style="margin: 20px;">
-                        <img src="imagenes/vba.jpg" alt="vba" width="120" style="margin: 20px;">
+                    <div class="tab-content"> <!--For content-->
+                        <div id="back-end" class="tab-pane backEnd">
+                            <img src="resources/images/skills/Python-logo-notext.svg" alt="python3" width= "80" style="margin: 20px;">
+                            <img src="resources/images/skills/kivy-icon-256.png" alt="kivy_basic" width= "80" style="margin: 20px;">
+                            <img src="resources/images/skills/Django_logo.svg" alt="django_basic" width= "140" style="margin: 20px;">
+                        </div>
+                        <div id="front-end" class="tab-pane frontEnd">
+                            <img src="resources/images/skills/html.jpg" alt="html_css_js" width="80" style="margin: 20px;">
+                            <img src="resources/images/skills/css.jpg" alt="html_css_js" width="80" style="margin: 20px;">
+                            <img src="resources/images/skills/js.jpg" alt="html_css_js" width="80" style="margin: 20px;">
+                        </div>
+                        <div id="both-end" class="tab-pane otherSkills">
+                            <img src="resources/images/skills/github-mark.png" alt="github" width="70" style="margin: 20px;">
+                            <img src="resources/images/skills/PyCharm_Icon.svg" alt="pycharm" width="70" style="margin: 20px;">
+                            <img src="resources/images/skills/vsc.png" alt="visual_studio_code" width="70" style="margin: 20px;">
+                            <img src="resources/images/skills/Anaconda_Logo.png" alt="anaconda" width="120" style="margin: 20px;">
+                        </div>
+                        <div id="other" class="tab-pane sap">
+                            <img src="resources/images/skills/sap.PNG.jpg" alt="sap" width="120" style="margin: 20px;">
+                            <img src="resources/images/skills/vba.jpg" alt="vba" width="120" style="margin: 20px;">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <div class="backButton">
-        <button class="button-glowing" onclick="location.href='#link_up'">Up</button>
-    </div>
+        <div class="backButton">
+            <button class="button-glowing" onclick="location.href='#link_up'">Up</button>
+        </div>
+    </main>
+    <!-- END of page-->
+    <footer-element></footer-element>
 </body>
 
-<!-- Create virtual space below the button so the footer does not hide it.
---Note the footer will be "locked" always below of the page even if you scroll
--- Only use when footer is position: fixed;
--->
-<!-- <br /><br /><br /> -->
-<footer>
-    <p>Juan Carcedo </p>
-    <p>Copyright &copy; 2022-2023</p>
-    <!-- Icons -->
-    <div class="bucket-images">
-        <a href="https://www.linkedin.com/in/juancarcedoaldecoa/en" target="_blank" rel="noopener noreferrer">
-            <img src="imagenes/icon_linkedin.png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/JuanCarcedo" target="_blank" rel="noopener noreferrer">
-            <img src="imagenes/github-mark-white.png " alt="GitHub">
-        </a>
-    </div>
-</footer>
-<script src="main.js"></script>
+<script src="components/main.js"></script>
 </html>

@@ -7,30 +7,15 @@
     <title>About me</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Ubuntu+Mono" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="icon" href="imagenes/favicon.ico">
+    <link rel="stylesheet" href="components/main.css">
+    <link rel="icon" href="resources/images/favicon.ico">
+    <script src="components/navigation_menu.js" type="text/javascript" defer></script>
+    <script src="components/footer_pages.js" type="text/javascript" defer></script>
 </head>
 
 <body>
-    <a id="link_up" data-hs-anchor="true"></a>
     <!-- Navigation bar -->
-    <nav class="navbar">
-        <ul class="nav-links">
-            <!-- Navigation menu using checkbox for small screens -->
-            <input type="checkbox" id="checkbox_toggle" />
-            <!-- Include hamburger symbol -->
-            <label for="checkbox_toggle" class="hamburger">&#9776;</label>
-            <div class="nav-menu">
-                <li><a href="index.html" rel="noopener">Home</a></li>
-                <li><a href="experience.html" rel="noopener">Experience</a></li>
-                <li><a href="#link_up" rel="noopener">About</a></li>
-                <li><a href="shop/shop_main.html" rel="noopener">Bootstrap shop</a></li>
-            </div>
-        </ul>
-    </nav>
-        <!-- <br><br /> ONLY FOR FROZEN NAV -->
-    <!-- End navigation bar -->
-
+    <navigation-menu></navigation-menu>
     <main>
         <h1 class="title_center">
             <span class="horizontal-line"> About me </span>
@@ -119,25 +104,9 @@
 
     </main>
     <br /><br />
+    <!-- END of page-->
+    <footer-element></footer-element>
 </body>
 
-<!-- Create virtual space below the button so the footer does not hide it.
---Note the footer will be "locked" always below of the page even if you scroll
--- Only use when footer is position: fixed;
--->
-<!-- <br /><br /><br /> -->
-<footer>
-    <p>Juan Carcedo </p>
-    <p>Copyright &copy; 2022-2023</p>
-    <!-- Icons -->
-    <div class="bucket-images">
-        <a href="https://www.linkedin.com/in/juancarcedoaldecoa/en" target="_blank" rel="noopener noreferrer">
-            <img src="imagenes/linkedin_white.png" alt="LinkedIn">
-        </a>
-        <a href="https://github.com/JuanCarcedo" target="_blank" rel="noopener noreferrer">
-            <img src="imagenes/github-mark-white.png " alt="GitHub">
-        </a>
-    </div>
-</footer>
-<script src="main.js"></script>
+<script src="components/main.js"></script>
 </html>

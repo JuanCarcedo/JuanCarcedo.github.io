@@ -38,6 +38,6 @@ function multipleFunctions(x) {
     // Change opacity based on which item was clicked.
     document.getElementById("back-end").style.opacity = a;
     document.getElementById("front-end").style.opacity = b;
-    document.getElementById("more").style.opacity = c;
+    document.getElementById("both-end").style.opacity = c;
     document.getElementById("other").style.opacity = d;
 }
