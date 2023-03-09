@@ -1,6 +1,6 @@
 /*
     Juan Carcedo 2023
-    Footer element rehusable for the whole webpage.
+    Footer element reusable for the whole webpage.
 */
 
 // Declaration of the extended class for footer

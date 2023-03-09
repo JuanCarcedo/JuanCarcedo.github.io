@@ -1,6 +1,6 @@
 /*
     Juan Carcedo 2023
-    Navigation Menu rehusable for the whole webpage.
+    Navigation Menu reusable for the whole webpage.
 */
 
 // Declaration of the extended class for navigational bar
