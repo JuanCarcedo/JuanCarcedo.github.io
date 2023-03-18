@@ -13,7 +13,7 @@ class Footer extends HTMLElement {
         this.innerHTML = `
         <footer>
             <p>Juan Carcedo </p>
-            <p>Copyright &copy; 2022-2023</p>
+            <p>Copyright &copy; 2023</p>
             <!-- Icons -->
             <div class="bucket-images">
                 <a href="https://www.linkedin.com/in/juancarcedoaldecoa/en" target="_blank" rel="noopener noreferrer">
